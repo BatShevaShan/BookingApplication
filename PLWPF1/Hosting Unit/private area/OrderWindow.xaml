@@ -1,0 +1,20 @@
+﻿<Window x:Class="PLWPF1.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF1"
+        mc:Ignorable="d"
+        Title="OrderWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="OrderListButton" Content="Orders" Background="Snow"
+            Margin="10" FontSize="50" Grid.Row="0" Click="OrderListButton_Click"/>
+        <Button x:Name="ClientListButton" Content="Clients" Background="Snow"
+            Margin="10" FontSize="50" Grid.Row="1" Click="ClientListButton_Click"/>
+
+    </Grid>
+</Window>

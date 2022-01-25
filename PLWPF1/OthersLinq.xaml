@@ -1,0 +1,22 @@
+﻿<Window x:Class="PLWPF1.OthersLinq"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF1"
+        mc:Ignorable="d"
+        Title="OthersLinq" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="GuestRequestByNumOfGuestButton" Background="Snow" Content="Guest Request By Num Of Guest"
+            Margin="10" FontSize="30" Grid.Row="0" Click="GuestRequestByNumOfGuestButton_Click"/>
+        <Button x:Name="GustRequestByAreaButton" Background="Snow" Content="Gust Request By Area"
+            Margin="10" FontSize="30" Grid.Row="1" Click="GustRequestByAreaButton_Click"/>
+        <Button x:Name="HostingUnitByAreaButton" Background="Snow" Content="Hosting Unit By Area"
+            Margin="10" FontSize="30" Grid.Row="2" Click="HostingUnitByAreaButton_Click"/>
+    </Grid>
+</Window>

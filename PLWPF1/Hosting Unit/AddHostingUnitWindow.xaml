@@ -1,0 +1,104 @@
+﻿<Window x:Class="PLWPF1.AddHostingUnit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF1"
+        mc:Ignorable="d"
+        Title="AddHostingUnit" Height="436.666" Width="802.667">
+    <Grid Margin="0,0,-7,0" Height="396" VerticalAlignment="Top" Background="Snow">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label FontSize="20" Height="56" Margin="0,0,-67.333,64" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="302" Grid.Column="2" >Add Hosting Unit</Label>
+        <WrapPanel Grid.ColumnSpan="3" Margin="0,0,12.667,-25" >
+            <WrapPanel Orientation="Vertical" Width="802" Height="364" >
+                <Label Content="The Name Of The Unit:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="hostingUnitName" HorizontalAlignment="Left" Height="23" Margin="7,0,0,10" Text="{Binding HostingUnitName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="128"/>
+                <CheckBox x:Name ="_poolHostingUnit" Content="Pool" FontSize="20" IsChecked="{Binding poolHostingUnit}"/>
+                <CheckBox x:Name ="_jacuzziHostingUnit" Content="Jacuzzi" FontSize="20" IsChecked="{Binding jacuzziHostingUnit}"/>
+                <CheckBox x:Name ="_gardenHostingUnit" Content="Garden" FontSize="20" IsChecked="{Binding gardenHostingUnit}"/>
+                <CheckBox x:Name ="_childrensAttractionsHostingUnit" FontSize="20" Content="Childrens Attractions" IsChecked="{Binding childrensAttractionsHostingUnit}"/>
+
+                <Label Content="Area:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <ComboBox x:Name="AreaHostingUnitComboBox" Background="HotPink" SelectedItem="{Binding areaHostingUnit}" Margin="0,0,0,6" Width="124"/>
+
+                <Label Content="Type:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <ComboBox x:Name="typeHostingUnitComboBox" Background="HotPink" SelectedItem="{Binding typeHostingUnit}" Margin="0,0,0,6" Width="124"/>
+
+                <Label Content="Private Name:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="PrivateNameTextBox" HorizontalAlignment="Left" Height="23" Margin="0,4,0,10" Text="{Binding PrivateName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Mail Address:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="MailAddressTextBox" HorizontalAlignment="Left" Height="23" Margin="0,4,0,10" Text="{Binding MailAddress, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Family Name:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="FamilyNameTextBox" HorizontalAlignment="Left" Height="23" Margin="0,4,0,10" Text="{Binding FamilyName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Fhone Number:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="FhoneNumber" HorizontalAlignment="Left" Height="23" Margin="0,4,0,10" Text="{Binding FhoneNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Bank Details:" FontSize="25" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+
+                <Label Content="Bank Account Number:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="BankAccountNumber" HorizontalAlignment="Left" Height="23" Margin="0,4,0,10" Text="{Binding BankAccountNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Bank Name:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="BankName" HorizontalAlignment="Left" Height="23" Margin="0,4,0,10" Text="{Binding BankName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Branch Address:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="BranchAddress" HorizontalAlignment="Left" Height="23" Margin="0,4,0,10" Text="{Binding BranchAddress, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Branch City:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="BranchCity" HorizontalAlignment="Left" Height="23" Margin="0,4,0,10" Text="{Binding BranchCity, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Branch Number:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="BranchNumber" HorizontalAlignment="Left" Height="23" Margin="0,4,0,10" Text="{Binding BranchNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Bank Number:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="BankNumber" HorizontalAlignment="Left" Height="23" Margin="0,4,0,10" Text="{Binding BankNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+
+                <Label Content="Your Key Is:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,6" VerticalAlignment="Center"/>
+                <TextBox x:Name="KeyTextBox" HorizontalAlignment="Left" Height="26" Margin="0,4,0,10" Text="{Binding Path=HostingUnitKey, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="45" IsEnabled="False"/>
+
+            </WrapPanel>
+        </WrapPanel>
+        <Button x:Name="addButton" Background="Pink" Content="Add" FontSize="30" Margin="33.667,337,43,10" Click="addButton_Click" Grid.Column="4" RenderTransformOrigin="-0.967,0.19">
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=hostingUnitName, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=PrivateNameTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=MailAddressTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=FamilyNameTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=FhoneNumber, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=BankAccountNumber, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=BankName, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=BranchNumber, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=BankNumber, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>
